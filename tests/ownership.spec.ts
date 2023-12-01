@@ -1,7 +1,7 @@
 import { expect_to_fail, get_account, set_mockup, set_mockup_now, set_quiet } from '@completium/experiment-ts'
 import { Option } from '@completium/archetype-ts-types'
 
-const assert = require('assert')
+import assert from 'assert';
 
 import { ownership } from './binding/ownership'
 
@@ -24,7 +24,7 @@ set_mockup_now(new Date(Date.now()))
 
 /* Scenario ---------------------------------------------------------------- */
 
-describe('[Template] ownership', async () => {
+describe('[Template] ownership', () => {
   it('Deploy ownership', async () => {
     await ownership.deploy(alice.get_address(), { as: alice })
   });
